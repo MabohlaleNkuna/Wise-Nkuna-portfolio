@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">About me</a></li>
+                   <li><a href="#">My projects</a></li>
+                   <li><a href="#">Contact me</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1 class="zoom">
+                    <span class="word">I'm</span>
+                    <span class="word">Wise</span>
+                    <span class="word">Mabohlale</span>
+                    <span class="word">Nkuna</span>
+                  </h1>
+                <p>Software Developer</p>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-image-col">
+                    <img src="assets/profile.png">
+                </div>
+                <div class="about-text-col">
+                    <h1 class="sub_title">About Me</h1>
+                    <p>
+                        As a driven and enthusiastic individual,
+                        I thrive on the challenges of coding and problem-solving, 
+                        leveraging technology to its fullest potential. Graduating from Zaio Coding School's 
+                        Full Stack Java Development NQF 5 program has equipped me with a versatile skill set in software development.
+                        Furthermore, I hold certificates in Python Essentials 1 from both Cisco Networking Academy and the Python Institute, 
+                        along with a SheCodes Basic Certificate.
+                        My dedication to staying updated with the latest industry trends ensures that I am always at the forefront
+                        of technological advancements. I am passionate about the transformative power of technology to tackle complex issues,
+                        and I am eager to apply my expertise in a professional environment. With a focus on innovation and a drive to make
+                        a meaningful impact, I am ready to contribute effectively and enhance productivity wherever I go.
+                    </p>
+                    <div class="navbar">
+                        <p class="navbar-links underline" onclick="tab('skills')">Skills</p>
+                        <p class="navbar-links underline" onclick="tab('education')">Education</p>
+                        <p class="navbar-links underline" onclick="tab('exprience')">Exprience</p>
+                    </div>
+                    <div class="my-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming languages</span><br>Python, JavaScript, Java and C++</li>
+                            <li><span>Web development frameworks</span><br>React.js and Spring Boot</li>
+                            <li><span>Frontend technologies</span><br>HTML and CSS</li>
+                            <li><span>Document Object Model</span><br>(DOM)</li>
+                            <li><span>Database management</span><br>SQL(including MySQL) and Firebase</li>
+                            <li><span>Version control systems</span><br>Git and GitHub</li>    
+                        </ul>
+                    </div>
+                    <div class="my-contents" id="education">
+                        <ul>
+                            <li><span>2017</span><br>Matric</li>
+                            <li><span>2023</span><br>Full-Stack development Bootcamp at Zaio</li> 
+                        </ul>
+                    </div>
+                    <div class="my-contents" id="exprience">
+                        <ul>
+                            <li><span>2023-current</span><br>Data-Annotation internship at Botlhale AI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        var tablinks = document.getElementsByClassName("navbar-links");
+        var tabcontents = document.getElementsByClassName("my-contents");
+        function tab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("underline");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("underline");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
